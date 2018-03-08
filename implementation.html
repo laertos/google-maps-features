@@ -22,6 +22,18 @@ API Course, Lesson 1 -->
         center: {lat: 40.7413549, lng: -73.99802439999996},
         zoom: 12
        });
+       var tribeca = {lat: 40.719526, lng: -74.0089934};
+       var marker = new google.maps.Marker({
+        position: tribeca,
+        map: map,
+        title: 'First Marker!'
+       });
+       var infowindow = new google.maps.InfoWindow({
+        content: "Tribeca stands for triangle below Canal"
+       });
+       marker.addListener('click',function() {
+        infowindow.open(map, marker);
+       });
      }
    </script>
    <!--TODO: Load the JS API ASYNCHRONOUSLY below.-->
